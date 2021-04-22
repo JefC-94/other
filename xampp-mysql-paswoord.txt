@@ -1,0 +1,12 @@
+Xampp verander root wachtwoord van mysql
+
+
+MySQL -> change password of user “root”
+
+-> open xampp terminal
+-> go to folder “phpmyadmin”
+
+-> apt-get update
+-> apt-get install nano
+-> nano config.inc.php
+-> change password for root here as well
