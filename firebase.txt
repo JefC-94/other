@@ -1,0 +1,63 @@
+Firebase
+
+
+Firebase Project setup
+
+Maak twee folders:
+
+ - public
+	- css
+	- js
+	index.html (hoeft nog niet aangemaakt te worden eigenlijk, w overschreven)
+
+ - src
+	- css
+		- style.scss
+	- js
+		- main.js
+		- component.js
+
+firebase init hosting
+	-> dit maakt een public folder met daarin index.html aan + enkele andere files
+	
+Om cloud functions op te zetten: (backend server functions)
+firebase init
+	-> selecteer cloud functions uit lijst van opties + y + y (installeert functions folder)
+	-> initialize cloud functions on the front-end, later deploy to server
+	-> index.js file in “functions” folder
+
+	-> firebase deploy —only functions -> probleem met node version -> checken!!
+
+clean-up:
+	- delete style tags
+	- place scripts at bottom and remove defer
+	- add script tags with SDK config code
+	- get references to auth() and database():
+		var database = firebase.database();
+		var auth = firebase.auth();
+
+npm init -y
+npm install sass
+npm install npm-run-all
+npm install parcel (nodig? -> devDep)
+
+voeg de npm run dev nodige scripts toe
+
+"dev" : "npm-run-all --parallel sass js",
+"sass" : "sass src/scss/style.scss public/css/style.css --watch",
+"js" : "parcel watch ./src/js/main.js bundle.js --out-dir public/js --out-file bundle.js --public-url ./"
+
+npm run dev	
+
+firebase serve
+	-> local server om te developpen
+
+npm install firebase-tools -g
+
+
+
+Projects overview:
+
+ - firebase1 : basic todoApp with user login
+ - firebase2 : user login system + user data saved to database (realtime database)
+ - firebase3 : cloud firestore + first touch at contact per user display
