@@ -1,0 +1,10 @@
+ - PHP yii2 application maken from scratch:
+
+	-> install composer op xampp (via terminal (root)):
+		curl -sS https://getcomposer.org/installer | php
+		
+	-> install yii project
+		composer create-project --prefer-dist yiisoft/yii2-app-basic ../opt/lampp/htdocs/projectnaam
+		
+	-> zorg voor schrijfmogelijkheden in visual studio code:
+		voer commando "chmod -R 777 projectmap" uit in terminal/htdocs
