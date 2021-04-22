@@ -1,0 +1,27 @@
+Install angular/cli
+
+ -> sudo npm install -g @angular/cli
+
+Install typescript
+
+-> sudo npm install -g typescript
+
+
+Transpile typescript to javascript file -> tsc main.ts (automatisch in Angular)
+
+Create angular app:
+
+-> ng new appname (makes new directory)
+
+Serve app:
+-> ng serve
+
+Create component with cli:
+
+-> ng g c name 	(generate component)
+
+-> ng g c name --skipTests (zonder spec file)
+
+
+Create Service with cli:
+-> ng g s name
